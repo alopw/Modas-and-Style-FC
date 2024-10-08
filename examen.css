@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;900&family=Londrina+Sketch&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Mantener fuente predeterminada para el cuerpo */
+    margin: 0;
+    padding: 0;
+    background-color: #d3d3d3; /* Fondo gris claro */
+}
+
+/* Encabezado */
+header {
+    background-color: #001f3f; /* Azul marino */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Espacio lateral */
+}
+
+button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición para el color */
+}
+
+button:hover {
+    background-color: rgba(0, 191, 255, 0.7); /* Celeste opaco */
+}
+
+h1 {
+    font-family: 'Cinzel', cursive; /* Aplicar la nueva fuente solo al título */
+    font-size: 2.5em;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Tarjetas de productos */
+.productos {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.tarjeta {
+    width: 200px; /* Ancho fijo para mantener el tamaño */
+    height: 300px; /* Altura fija para mantener el tamaño */
+    perspective: 1000px;
+    margin: 20px; /* Añadido margen entre tarjetas */
+    position: relative; /* Necesario para el posicionamiento absoluto interno */
+}
+
+.tarjeta .front, .tarjeta .back {
+    width: 100%;
+    height: 135%; 
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em; 
+    color: Black;
+    text-align: center;
+    transition: transform 0.6s; 
+    padding: 20px; /* Espaciado interno */
+}
+
+.tarjeta .front {
+    background-color: rgba(0, 191, 255, 0.7); /* Celeste al frente */
+}
+
+.tarjeta .back {
+    background-color: white; 
+    border: 0.1em solid rgba(0, 191, 255, 0.7); /* Margen celeste */
+    transform: rotateY(180deg);
+}
+
+.tarjeta:hover .front {
+    transform: rotateY(180deg); /* Voltea la tarjeta hacia atrás */
+}
+
+.tarjeta:hover .back {
+    transform: rotateY(0deg); /* Muestra el lado de atrás */
+}
+
+
+.mision-vision-form {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.card-left, .card-right {
+    width: 30%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.formulario {
+    width: 30%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Galería de fotos */
+.galeria {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+audio {
+    display: block; 
+    margin: 20px auto;
+    width: 300px; 
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #00bfff;
+    text-decoration: none;
+}
